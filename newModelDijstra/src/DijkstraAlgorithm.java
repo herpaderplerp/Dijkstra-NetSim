@@ -42,8 +42,8 @@ public class DijkstraAlgorithm {
     for (Vertex target : adjacentNodes) {
       if (getShortestDistance(target) > getShortestDistance(node)
           + getDistance(node, target)) {
-        distance.put(target, getShortestDistance(node) //casting might work to solve issue, assuming no information after decimal point
-            + getDistance(node, target));
+        distance.put(target, (int) (getShortestDistance(node) //casting might work to solve issue, assuming no information after decimal point
+            + getDistance(node, target)));
         predecessors.put(target, node);
         unSettledNodes.add(target);
       }
