@@ -42,7 +42,7 @@ public class DijkstraAlgorithm {
     for (Vertex target : adjacentNodes) {
       if (getShortestDistance(target) > getShortestDistance(node)
           + getDistance(node, target)) {
-        distance.put(target, getShortestDistance(node)
+        distance.put(target, getShortestDistance(node) //casting might work to solve issue, assuming no information after decimal point
             + getDistance(node, target));
         predecessors.put(target, node);
         unSettledNodes.add(target);
@@ -51,7 +51,7 @@ public class DijkstraAlgorithm {
 
   }
 
-  private int getDistance(Vertex node, Vertex target) {
+  private double getDistance(Vertex node, Vertex target) {
     for (Edge edge : edges) {
       if (edge.getSource().equals(node)
           && edge.getDestination().equals(target)) {
