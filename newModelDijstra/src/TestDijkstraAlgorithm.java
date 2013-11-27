@@ -8,6 +8,15 @@ public class TestDijkstraAlgorithm {
   private List<Vertex> nodes;
   private List<Edge> edges;
 
+	public static void main(String[] args) {
+
+		String[] lineArray = readFile(args[0]);
+		// convertToVertex(lineArray);
+		// convertToData(lineArray);
+
+	}
+  
+  
   
   public void testExcute() {
     nodes = new ArrayList<Vertex>();
