@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class TestDijkstraAlgorithm {
@@ -13,7 +14,23 @@ public class TestDijkstraAlgorithm {
 		String[] lineArray = readFile(args[0]);
 		// convertToVertex(lineArray);
 		// convertToData(lineArray);
-
+		Scanner sc = new Scanner(args[0]);
+		int vertexAmount=sc.nextInt();
+		
+		for (int i = 0; i < vertexAmount; i++) {
+		      Vertex location = new Vertex("Node_" + i, "Node_" + i);
+		      nodes.add(location);
+		    }		
+		
+		int i =0;
+		while (sc.hasNext()==true){ //read file (effectively) line by line
+			addLane("Edge_"+i, sc.nextInt(), sc.nextDouble(), sc.nextDouble());
+			i++;
+		}
+		
+		
+		
+		
 	}
   
   
