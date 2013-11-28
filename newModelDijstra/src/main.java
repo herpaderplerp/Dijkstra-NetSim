@@ -18,15 +18,19 @@ public class main {
 	        System.exit(1);
 		}
 
-		
+
 		
 		main main = new main();
 		main.conversion(args[0]);
+
+		
+		
 
 		System.exit(0);
 
 	}
 
+	
 	public void conversion(String fileLocation) {
 
 		nodes = new ArrayList<Vertex>();
