@@ -10,17 +10,24 @@ public class main {
 	private List<Vertex> nodes;
 	private List<Edge> edges;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { //set your debug arguments to point to ARPA.txt file
+		//example: C:/Users/Tyronne/Documents/ARPA.txt
+		
+		if(args.length==0){
+	        System.err.println("First argument must be location of ARPA.txt");
+	        System.exit(1);
+		}
 
-
+		
+		
 		main main = new main();
-		main.conversion();
+		main.conversion(args[0]);
 
 		System.exit(0);
 
 	}
 
-	public void conversion() {
+	public void conversion(String fileLocation) {
 
 		nodes = new ArrayList<Vertex>();
 		edges = new ArrayList<Edge>();
@@ -28,7 +35,7 @@ public class main {
 		// Scanner sc = new Scanner(args[0]);
 		try {
 			File file = new File(
-					"C:/Users/cJustin/Documents/School/School-2013-2014-Sem7-Fall/NETSIM-NET4001/Project/ARPA.txt");
+					fileLocation);
 
 			Scanner sc = new Scanner(file);
 			int vertexAmount = sc.nextInt();
