@@ -13,16 +13,15 @@ public class main {
 	public static void main(String[] args) { //set your debug arguments to point to ARPA.txt file
 		//example: C:/Users/Tyronne/Documents/ARPA.txt
 		
-		if(args.length==0){
-	        System.err.println("First argument must be location of ARPA.txt");
-	        System.exit(1);
-		}
+//		if(args.length==0){
+//	        System.err.println("First argument must be location of ARPA.txt");
+//	        System.exit(1);
+//		}
 
 
-		
 		main main = new main();
 		main.conversion(args[0]);
-
+		
 		
 		
 

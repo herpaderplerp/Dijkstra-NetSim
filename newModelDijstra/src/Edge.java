@@ -12,6 +12,8 @@ public class Edge  {
     this.weight = weight;
     this.distance = distance;
   }
+ 
+  
   
   public String getId() {
     return id;
